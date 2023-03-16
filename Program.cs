@@ -46,14 +46,37 @@
 
 
 
-Console.Write("Введи число: ");
-int Number = Convert.ToInt32(Console.ReadLine());
-string NumberText = Convert.ToString(Number);
-if (NumberText.Length > 2)
+// Console.Write("Введи число: ");
+// int Number = Convert.ToInt32(Console.ReadLine());
+// string NumberText = Convert.ToString(Number);
+// if (NumberText.Length > 2)
+// {
+//   Console.WriteLine($"Третья цифра: {NumberText[2]}");
+// }
+// else 
+// {
+//   Console.WriteLine("Третьей цифры нет!");
+// }
+
+//Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+// 6 -> да
+// 7 -> да
+// 1 -> нет
+
+Console.Write("Введи цифру, обозначающую день недели: ");
+int dayNumber = Convert.ToInt32(Console.ReadLine());
+
+void CheckingTheDayOfTheWeek(int dayNumber)
 {
-  Console.WriteLine($"Третья цифра: {NumberText[2]}");
+  if (dayNumber == 6 || dayNumber == 7)
+  {
+    Console.WriteLine("Этот день ВЫХОДНОЙ!");
+  }
+  else if (dayNumber < 1 || dayNumber > 7)
+  {
+    Console.WriteLine("Введите правильную цифру!");
+  }
+  else Console.WriteLine("Этот день РАБОЧИЙ!");
 }
-else 
-{
-  Console.WriteLine("Третьей цифры нет!");
-}
+
+CheckingTheDayOfTheWeek(dayNumber);
