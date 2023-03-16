@@ -6,28 +6,54 @@
 
 
 
-int number = ReadInt("Введите трехзначное число: ");
-int size = number.ToString().Length;
+// int number = ReadInt("Введите трехзначное число: ");
+// int size = number.ToString().Length;
 
-if (size < 3 || size > 3)
-{
-    Console.WriteLine("Вы ввели не трехзначное число");
-}
-else
-{
-    Console.WriteLine(InCenter(number));
-}
+// if (size < 3 || size > 3)
+// {
+//     Console.WriteLine("Вы ввели не трехзначное число");
+// }
+// else
+// {
+//     Console.WriteLine(InCenter(number));
+// }
 
 
-int ReadInt(string message)
-{
-    Console.Write(message);
-    return Convert.ToInt32(Console.ReadLine());
-}
+// int ReadInt(string message)
+// {
+//     Console.Write(message);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
 
-int InCenter(int a)
-{
+// int InCenter(int a)
+// {
     
-    int result = ((a / 10) % 10);
-    return result;
+//     int result = ((a / 10) % 10);
+//     return result;
+// }
+
+// Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+// 645 -> 5
+// 78 -> третьей цифры нет
+// 32679 -> 6
+
+
+
+// Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+// 645 -> 5
+// 78 -> третьей цифры нет
+// 32679 -> 6
+
+
+
+Console.Write("Введи число: ");
+int Number = Convert.ToInt32(Console.ReadLine());
+string NumberText = Convert.ToString(Number);
+if (NumberText.Length > 2)
+{
+  Console.WriteLine($"Третья цифра: {NumberText[2]}");
+}
+else 
+{
+  Console.WriteLine("Третьей цифры нет!");
 }
